@@ -23,7 +23,7 @@ phases:
       - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
       - echo start command
       - $(aws ecr get-login --no-include-email --region eu-central-1)
-      - cd ordemanagement
+      - cd ordermanagement
       - echo $PWD
   build:
     commands:
