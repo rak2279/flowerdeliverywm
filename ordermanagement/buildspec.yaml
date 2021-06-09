@@ -2,7 +2,7 @@ version: 0.2
 
 env:
   variables:
-    _PROJECT_NAME: "user22-delivery"
+    _PROJECT_NAME: "user22-ordermanagement"
 
 phases:
   install:
@@ -23,7 +23,7 @@ phases:
       - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
       - echo start command
       - $(aws ecr get-login --no-include-email --region eu-central-1)
-      - cd delivery
+      - cd ordemanagement
       - echo $PWD
   build:
     commands:
@@ -82,7 +82,7 @@ phases:
                       - containerPort: 8080
                     readinessProbe:
                       httpGet:
-                        path: '/deliveries'
+                        path: '/ordermanagements'
                         port: 8080
                       initialDelaySeconds: 10
                       timeoutSeconds: 2
@@ -90,7 +90,7 @@ phases:
                       failureThreshold: 10
                     livenessProbe:
                       httpGet:
-                        path: '/deliveries'
+                        path: '/ordermanagements'
                         port: 8080
                       initialDelaySeconds: 120
                       timeoutSeconds: 2
