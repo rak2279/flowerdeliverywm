@@ -1,0 +1,14 @@
+Saga -> 구현 -> 완료
+CQRS -> 구현 -> 완료
+Correlation -> 구현 -> 완료
+Req/Resp -> 구현 -> 완료
+Gateway -> 구현 -> 완료
+Polyglot ->  구현 -> 완료
+Deploy/ Pipeline -> 구현 -> 완료
+Circuit Breaker -> 구현 -> 완료
+Autoscale (HPA) -> 구현 -> 완료
+
+Config Map/ Persistence Volume -> 미구현
+Zero-downtime deploy (Readiness Probe) -> 미구현
+Self-healing (Liveness Probe) -> 미구현
+
